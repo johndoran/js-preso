@@ -1,0 +1,668 @@
+<!doctype html>  
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		
+		<title>iKit and JS</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script>
+			// If the query includes 'print-pdf' we'll use the PDF print sheet
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	
+	<body>
+		
+		<div class="reveal">
+
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+    <section>
+        <h1>js and ikit</h1>
+        <p>An introduction and demo</p>
+        <p>
+        <br>
+    </p>
+    <p>By John D</p>
+    <p>Karol D and John S</p>
+    <p>
+    <br>
+</p>
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+<p>
+<br>
+</p>
+<h6>disclaimer : not Js guru's</h6>
+</section>
+<section>
+    <h3>Javascript</h3>
+    <div style="text-align: left;">
+        <div style="text-align: center;">
+            <ul>
+                <li>
+                    <span style="text-align: center; ">Structured</span>
+                    <br>
+                </li>
+                <li>
+                    <span style="text-align: center; ">Dynamic - types</span>
+                    <br>
+                </li>
+                <li>
+                    <span style="text-align: center; ">Object based</span>
+                    <br>
+                </li>
+                <li>
+                    <span style="text-align: center; ">Runtime evaluation</span>
+                    <br>
+                </li>
+                <li>
+                    <span style="text-align: center; ">Functional - fist class citizens</span>
+                </li>
+                <li>
+                    <span style="text-align: center; ">Same constructs as other langs</span>
+                </li>
+                <li>
+                    <span style="text-align: center; ">if, else, loops, maps, sets, arrays etc</span>
+                    <br>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <br>
+    </div>
+    <div>
+        <br>
+    </div>
+</section>
+<section>
+    <h3>History</h3>
+    <div>
+        <img src="http://www.geekgumbo.com/wp-content/uploads/2010/08/history1.png">
+        <br>
+    </div>
+</section>
+<section>
+    <h2>We're looking at<br>
+    </h2>
+    <div style="">
+        <ul>
+            <li>
+                <span style="">backbone.js</span>
+            </li>
+            <li>
+                <span style="">bindings, rich api, models, custom events</span>
+            </li>
+            <li>angular.js</li>
+            <li>di, binding, testing, controllers, server integration</li>
+            <li>Chocolate chip ui</li>
+            <li>node.js</li>
+            <li>scalable, event driven, non blocking, light server</li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h2>Testing</h2>
+    <div>
+        <ul>
+            <li>Early days... but</li>
+            <li>qunit and sinnion(for mocks)</li>
+            <li>Run in any browser(headless)</li>
+            <li>BDD jasmine.js</li>
+            <li>JSLint static analysis tool</li>
+            <li>Adhering to js best practices</li>
+        </ul>
+    </div>
+    <div>
+        <br>
+    </div>
+</section>
+<section>
+    <h2>Types and variables</h2>
+    <div>
+        <ul>
+            <li>Not strictly types</li>
+            <li>local</li>
+            <li>gobal</li>
+        </ul>
+        <pre>var myVar = 1;
+var one=1, two = 2, three="three";
+four = 4; // bad way of declaring (no "var" keyword)
+
+function myFunc() {
+	var x; // local variable
+	x = myVar; // assignment to a global variable
+}<br>
+    </pre>
+</div>
+</section>
+<section>
+    <section>
+        <h2>Functions</h2>
+        <div>Different ways to declare them</div>
+        <div>
+            <br>
+        </div>
+        <pre>// function with one argument
+function abc(someArg) {
+	alert("Hello world " + someArg);
+}
+abc("of Javascript"); 
+
+// function assigned to a variable
+var myFunc = function() {
+	alert("myFunc");
+}; 
+
+// lambda syntax 
+$("#myButton").click(function() {
+	alert("Button clicked!");
+});<br>
+    </pre>
+</section>
+<section>
+    <h2>Functions</h2>
+    <div style="text-align: center;">Functions are first-class<br>
+    </div>
+    <div style="text-align: center;">&nbsp;They have properties and methods<br>
+    </div>
+    <div style="text-align: center;">
+        <div>
+            <br>
+        </div>
+        <div>Nested functions and closures</div>
+        <div>"Inner" or "nested" are defined within another function</div>
+        <div>double as object constructors<br>
+        </div>
+        <div>
+            <br>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>FunCtions</h2>
+    <div>
+        <div style="font: inherit; ">&nbsp;Prefixing a function call with new creates a new object<br>
+        </div>
+        <div style="font: inherit; ">functions as methods.<br>
+        </div>
+        <div style="font: inherit; ">
+            <br>
+        </div>
+        <div style="font: inherit; ">There is no distinction between a function definition and a method definition<br>
+        </div>
+    </div>
+    <div>
+        <br>
+    </div>
+</section>
+</section>
+<section>
+    <section>
+        <h2>Objects</h2>
+        <div>
+            <img src="http://brendaneich.github.com/Strange-Loop-2012/assets/images/no-classes.jpg">
+            <br>
+        </div>
+        <div>JS is not object orientated</div>
+    </section>
+    <section>
+        <h2>
+            <h2 style="font: inherit; ">NO CLASS...</h2>
+        </h2>
+        <h2>
+            <img src="http://brendaneich.github.com/Strange-Loop-2012/assets/images/some-guys-have-no-class.jpg">
+        </h2>
+        <div>JS objects are associative arrays</div>
+    </section>
+    <section>
+        <h2>Objects</h2>
+        <div>All JS data structures are objects</div>
+        <div>
+            <br>
+        </div>
+        <pre>- Declaration:
+var anObject = new Object();
+var anObject = {};
+
+- Property Assignment:
+	//myVar can potentially be any JS data structure type
+var myVar;
+	anObject.myProperty = myVar;
+	anObject['myProperty '] = myVar;</pre>
+        <p style="text-align: center;">
+            <br>
+        </p>
+    </section>
+    <section>
+        <h2>Objects</h2>
+        <div>
+            <p style="font: inherit; ">Declaration with property assignment<br>
+            </p>
+            <pre>var anObject = { myProperty  : myVar };</pre>
+            <p>
+            <p style="font: inherit; ">
+                <br class="Apple-interchange-newline">Or an alternative</p>
+                <pre>function anObject(myVar) {
+  this.myProperty = myVar;
+}<br>
+            </pre>
+            <pre>var myObject = new anObject(myVar);<br>
+            </pre>
+            <h4>
+                <br>
+            </h4>
+            <div>Property retrieval<br>
+            </div>
+            <pre>var myVar = anObject['myProperty'];
+var myVar = anObject.myProperty;
+//If myProperty is a function
+var myVar = anObject.myProperty();<br>
+        </pre>
+    </p>
+    <p style="font: inherit; ">
+    </p>
+</div>
+</section>
+<section>
+    <h2>Objects</h2>
+    <div>Iteration</div>
+    <pre>for (var myProperty in anObject) {
+	var myValue = anObject[myProperty];
+}<br>
+</pre>
+<pre>//or use int i=0; i&lt;20; i++</pre>
+<p>gotchas</p>
+<pre>- undefined vs null
+&gt; null == undefined
+true
+&gt; null === undefined
+false<br>
+</pre>
+<pre>- foreach loop variable
+var arr = ['foo', 'bar', 'baz'];
+for (var key in arr) {
+	console.log(arr[key]); // key is an index
+}<br>
+</pre>
+</section>
+</section>
+<section>
+    <section>
+        <h2>"THIS" keyword</h2>
+        <p style="text-align: left;">&nbsp; &nbsp; &nbsp; An object</p>
+        <pre>function Container(param) {
+	var secret = 3;
+	var that = this;
+
+	function dec() { 
+		if (secret &gt; 0) {
+			secret -= 1;
+			return true;
+		} else {
+			return false;
+		}
+}
+this.member = param;
+
+this.service = function() {
+	return dec() ? that.member : null;
+};
+}
+var container = new Container("abc");<br>
+    </pre>
+</section>
+<section>
+    <h2>"this"</h2>
+    <pre>&gt; container.member
+"abc"
+&gt; container.service()
+"abc"
+&gt; container.service()
+"abc"
+&gt; container.service()
+"abc"
+&gt; container.service()
+null
+
+var obj = {};
+obj.service = container.service // "that" in service() method still points to container
+</pre>
+    <div style="text-align: left;">
+        <br>
+    </div>
+    <h2>
+        <br>
+    </h2>
+</section>
+<section>
+    <h2>This</h2>
+    <pre>- in onClick event
+&lt;a href="google.com" onclick="myFunc()" &gt; google.com&lt;/a&gt;
+
+function myFunc() {
+	var url = this.getAttribute("href");
+	console.log(url);
+}
+- in jQuery element
+$("#someDiv").click(function() {
+	console.log("'This' will be 'someDiv' element: " + this.innerHTML);
+});</pre>
+</section>
+<section>
+    <h2>REmember</h2>
+    <div>
+        <div style="font: inherit; ">
+            <ul>
+                <li>globals are bad&nbsp;<br>
+                </li>
+                <li>use namespaces&nbsp;<br>
+                </li>
+                <li>browser compatibility</li>
+            </ul>
+        </div>
+    </div>
+</section>
+</section>
+<section>
+    <section>
+        <h2>Advanced web-apps</h2>
+        <div style="text-align: left;">
+            <ul>
+                <li>
+                    <li>No single answer soloution.&nbsp;</li>
+                    <li>Combination of css, html, js, ajax.</li>
+                    <li>Client side scripting made easy with zepto.js(our jquery replacement).</li>
+                    <li>css used for hiding, moving, manipulation, animating elements.</li>
+                    <li>iKit used to help us combine these.</li>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>jquery</h2>
+        <div>
+            <div>
+                <ul>
+                    <li>Simplify&nbsp;<br>
+                    </li>
+                    <li>Manipulation of DOM<br>
+                    </li>
+                    <li>Ajax<br>
+                    </li>
+                    <li>Animations<br>
+                    </li>
+                    <li>Compatibility&nbsp;<br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>zepto</h2>
+        <h6>is jQuery but...</h6>
+        <div>
+            <ul>
+                <li>Faster</li>
+                <li>Lightweight</li>
+                <li>Mobile optimized</li>
+                <li>jQuery compatible</li>
+                <li>Can have plugins&nbsp;<br>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <h2>Selectors</h2>
+        <pre>$(), $('#foo')</pre>
+        <div>
+            <br>
+        </div>
+        <pre>//methods - $.each, find, filter, eq, pluk, parent, children, toggle, val, attr, data, text, slice, $extend, inArray, hasClass, show, hide<br>
+        </pre>
+        <div>
+            <br>
+        </div>
+        <pre>//chaining                                                         passenger.find('.freq-flyer input').val($('.freq-flyer', defaults).html());</pre>
+        <div>
+            <br>
+        </div>
+        <pre>
+            <p class="p1">
+                <span class="s2">//data + attr</span>
+            </p>
+            <p class="p1">
+                <span class="s2">var</span>
+                <span class="s1"> fareType = group.find(</span>'.iuncollapsed[data-faretype]'<span class="s1">).attr(</span>'data-faretype'<span class="s1">);</span>
+            </p>
+        </pre>
+    </section>
+</section>
+<section>
+    <h2>Json -&nbsp;Object Notation&nbsp;</h2>
+    <div>Everyone uses it...</div>
+    <div>
+        <br>
+    </div>
+    <div>
+        <div>
+            <ul>
+                <li>A collection of name/value pairs or an ordered list</li>
+                <li>string, number, object, boolean, null, array<br>
+                </li>
+                <li>toJson example<br>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <section>
+        <h2>ikit</h2>
+        <div>
+            <div>
+                <ul>
+                    <li>Essentially a bunch of JQuery plugins<br>
+                    </li>
+                    <li>Some cases applied automatically based on css classes, and helper methods.<br>
+                    </li>
+                    <li>Handles awkward internationalization like date/time via moment.js. Also can access message properties(IKitMessageFactory).<br>
+                    </li>
+                    <li>webkit-oriented, so works well on iOS/Droid only<br>
+                    </li>
+                    <li>Improve UX in untrobursibe way, unlike sencha touch or jquery mobile.<br>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Using ikit</h2>
+        <div>Two stylesheets</div>
+        <div>
+            <ul>
+                <li>
+                    <li>- ikit.css The first one is required and defines basic layouts and structures.</li>
+                    <li>- ikit-skin.css - can be completely replaced or overridden with custom styles.&nbsp;</li>
+                </li>
+            </ul>
+            <pre>&lt;cmp:touchskin&gt;link your js file here&lt;/cmp:touchskin&gt;
+//handles setup of all js, css, and messages/formats
+//should be setup in you footer(bottom of page)
+&lt;head&gt;link your css and ikit css files&lt;/head&gt;<br>
+        </pre>
+    </div>
+</section>
+<section>
+    <h2>Namespaces</h2>
+    <div>
+        <div>Don't load everything at the same time</div>
+    </div>
+    <pre>var ns = {
+  message : 'Hello',
+  helloWorld : function() \{ alert(this.message); },
+};
+//extending existing namespace using zepto
+$.extend(ns, {
+  howAreYou: function() ﻿\{ this.helloWorld(); alert('How are you?) }
+});  
+//onload  ns.howAreYou();<br>
+</pre>
+<div>Pagescript</div>
+<div style="text-align: left;">&nbsp; &nbsp; &nbsp; Name of the handler is build based on flow and state<br>
+</div>
+<div style="text-align: left;">&nbsp; &nbsp; &nbsp;It simply adds 'onReady' handler (function) to a global array<br>
+</div>
+<div>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+<div>
+    <br>
+</div>
+</section>
+</section>
+<section>
+    <section>
+        <h2>Ikit examples</h2>
+        <div>
+            <div style="text-align: left;">&nbsp; &nbsp; &nbsp; iCollapsable</div>
+            <pre>can have a header, have a summary, icgroup,<br>one at a time 'groupSelector', collapsed callback (collapsed/expanded)</pre>
+            <div style="text-align: left;">&nbsp; &nbsp; &nbsp; iDisable&nbsp;</div>
+            <pre>disable buttons</pre>
+            <div style="text-align: left;">&nbsp; &nbsp; &nbsp; iList</div>
+            <pre>renders iphone-like list with optional collapsible panels and      searchbox.<br>optional attributes like update filter(value)</pre>
+            <div style="text-align: left;">&nbsp; &nbsp; &nbsp; iConfirm</div>
+            <pre>add this class to a link and get a message each time. "footer.jsp"&nbsp;  css="full-site-link"&nbsp;&nbsp;</pre>
+        </div>
+    </section>
+    <section>
+        <h2>ikit examples</h2>
+        <div style="text-align: left;">&nbsp; &nbsp; &nbsp; iSwitch</div>
+        <pre>UI Switch transform select or checkbox into switch button (searchDetails.jsp)
+</pre>
+        <div style="text-align: left;">&nbsp; &nbsp; &nbsp; ajax</div>
+        <pre>
+            <pre style="font: inherit; width: 810px; ">request fragments, error handling, masking, timeouts, ihtml</pre>
+        </pre>
+        <div style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;iSpin</div>
+        <pre>ispin - UI Spinner transform select or checkbox into a spinner     (with +/- buttons)(searchDetails.jsp)
+</pre>
+        <div style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;others</div>
+        <pre>imask, isort, iscroll, ihtml, itimer, plus more</pre>
+        <div style="text-align: left;">
+            <font face="monospace">
+                <span style="font-size: 20px; line-height: 23.75px; white-space: pre;">&nbsp;</span>
+            </font>
+        </div>
+        <div>
+            <div style="text-align: left;">
+                <font face="monospace">
+                    <span style="font-size: 20px; line-height: 23.75px; white-space: pre;">
+                        <br>
+                    </span>
+                </font>
+            </div>
+            <div style="text-align: left;">&nbsp;</div>
+            <div style="text-align: left;">
+                <br>
+            </div>
+            <div style="text-align: left;">
+                <br>
+            </div>
+            <div style="text-align: left;">
+                <br>
+            </div>
+            <div style="text-align: left;">
+                <br>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Kris's Decadent Calendar</h2>
+        <pre> * - one month view (phone screen cannot fit more anyway)
+ * - any number of dates to select (usually 1 or 2)
+ * - configurable min-max range
+ * - configurable disabled dates
+ * - support for 'range' highlight for more than one selected date
+ * - selecting which date we want to choose from outside (i.e. tabs departure/return)
+ * - renderers for everything, min hardcoded markup
+ * - styling only with css
+ * - callbacks for any selection
+ * - animations
+ * - externalized i18n (incl JP) - with default config it requires      moment.js and ikit<br>
+    </pre>
+</section>
+</section>
+<section>
+    <h2>Questions ?</h2>
+    <div>
+        <br>
+    </div>
+    <div>
+        <br>
+    </div>
+    <div>Thanks for coming along</div>
+</section>
+</div>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				
+				theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+					{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+				]
+			});
+			
+		</script>
+
+	</body>
+</html>
